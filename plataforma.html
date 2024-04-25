@@ -10,7 +10,7 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
-<body onload="reloj()">
+<body onload="reloj(), getPlataforma()">
     <div class="container-md bg-secondary p-2">
 
         <!-- Menu de navegación -->
@@ -47,15 +47,67 @@
             </div>
         </nav>
 
-        <h1 class="text-primary text-center bg-secondary-subtle p-2">Sistema GEO</h1>
-        <div class="text-center p-5">
-            <img src="images/faro.jpeg" class="img-fluid rounded" alt="faro">
-        </div>
+        <h1 class="text-primary text-center bg-secondary-subtle p-2">Plataforma Operativa</h1>
+
+        <form>
+            <!-- browser -->
+            <div class="mb-3 row m-2">
+                <label for="browser" class="col-sm-3 col-form-label text-light">Browser</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control text-primary" id="browser" readonly>
+                </div>
+            </div>
+
+            <!-- cpu -->
+            <div class="mb-3 row m-2">
+                <label for="cpu" class="col-sm-3 col-form-label text-light">CPU</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control text-primary" id="cpu" readonly>
+                </div>
+            </div>
+
+
+            <!-- device -->
+            <div class="mb-3 row m-2">
+                <label for="device" class="col-sm-3 col-form-label text-light">Device</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control text-primary" id="device" readonly>
+                </div>
+            </div>
+
+            <!-- engine -->
+            <div class="mb-3 row m-2">
+                <label for="engine" class="col-sm-3 col-form-label text-light">Engine</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control text-primary" id="engine" readonly>
+                </div>
+            </div>
+
+            <!-- os -->
+            <div class="mb-3 row m-2">
+                <label for="os" class="col-sm-3 col-form-label text-light">OS</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control text-primary" id="os" readonly>
+                </div>
+            </div>
+
+            <!-- ua -->
+            <div class="mb-3 row m-2">
+                <label for="ua" class="col-sm-3 col-form-label text-light">UA</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control text-primary" id="ua" readonly>
+                </div>
+            </div>
+
+        </form>
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="/js/reloj.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ua-parser-js@0/dist/ua-parser.min.js"></script>  
+    <script src="/js/plataforma.js"></script>
 </body>
 
 </html>

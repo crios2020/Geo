@@ -10,7 +10,7 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
-<body onload="reloj()">
+<body onload="reloj(), ispFindMe()">
     <div class="container-md bg-secondary p-2">
 
         <!-- Menu de navegación -->
@@ -47,14 +47,62 @@
             </div>
         </nav>
 
-        <h1 class="text-primary text-center bg-secondary-subtle p-2">Sistema GEO</h1>
-        <div class="text-center p-5">
-            <img src="images/faro.jpeg" class="img-fluid rounded" alt="faro">
-        </div>
+        <h1 class="text-primary text-center bg-secondary-subtle p-2">Ubicación por ISP</h1>
+
+        <form>
+
+            <!-- Ubicación Status -->
+            <div class="mb-3 row m-2">
+                <label for="ispStatus" class="col-sm-3 col-form-label text-light">ISP Status</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control text-primary" id="ispStatus" readonly>
+                </div>
+            </div>
+
+            <!-- Región --> <!-- Continente --> <!-- País --> <!-- Ciudad -->
+            <div class="mb-3 row m-2">
+                <label for="region" class="col-sm-3 col-form-label text-light">Región</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control text-primary" id="region" readonly>
+                </div>
+            </div>
+
+            <!-- Coordenadas -->
+            <div class="mb-3 row m-2">
+                <label for="coordenadas" class="col-sm-3 col-form-label text-light">Coordenadas</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control text-primary" id="coordenadas" readonly>
+                </div>
+                <a class="btn btn-success col-sm-3 text-light" id="map-link"
+                    href="https://www.openstreetmap.org/#map=18"><img src="icons/search.svg" alt="lupa"> mapa</a>
+            </div>
+
+            <!-- ISP-->
+            <div class="mb-3 row m-2">
+                <label for="isp" class="col-sm-3 col-form-label text-light">ISP</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control text-primary" id="isp" readonly>
+                </div>
+            </div>
+
+            <!-- IP Pública -->
+            <!-- IP Version -->
+            <div class="mb-3 row m-2">
+                <label for="ip" class="col-sm-3 col-form-label text-light">IP</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control text-primary" id="ip" readonly>
+                </div>
+            </div>
+
+        </form>
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/isp.js"></script>
+
     <script src="/js/reloj.js"></script>
 </body>
 

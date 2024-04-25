@@ -10,9 +10,9 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
-<body onload="reloj()">
+<body onload="reloj(), geoFindMe()">
     <div class="container-md bg-secondary p-2">
-
+        
         <!-- Menu de navegación -->
         <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
             <div class="container-fluid">
@@ -46,15 +46,35 @@
                 </div>
             </div>
         </nav>
+        
+        <h1 class="text-primary text-center bg-secondary-subtle p-2">Ubicación por GPS</h1>
+        
+        <form>
 
-        <h1 class="text-primary text-center bg-secondary-subtle p-2">Sistema GEO</h1>
-        <div class="text-center p-5">
-            <img src="images/faro.jpeg" class="img-fluid rounded" alt="faro">
-        </div>
+            <!-- Ubicación Status -->
+            <div class="mb-3 row m-2">
+                <label for="gpsStatus" class="col-sm-3 col-form-label text-light">GPS Status</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control text-primary" id="gpsStatus" readonly>
+                </div>
+            </div>
+
+            <!-- Coordenadas -->
+            <div class="mb-3 row m-2">
+                <label for="coordenadas" class="col-sm-3 col-form-label text-light">Coordenadas</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control text-primary" id="coordenadas" readonly>
+                </div>
+                <a class="btn btn-success col-sm-3 text-light" id="map-link" href="https://www.openstreetmap.org/#map=18"><img src="icons/search.svg" alt="lupa"> mapa</a>
+            </div>
+         
+        </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/gps.js"></script>
     <script src="/js/reloj.js"></script>
 </body>
 
