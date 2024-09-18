@@ -13,7 +13,7 @@ function ispFindMe() {
 
     axios.get(`https://ipwhois.app/json/`)
         .then(function (response) {
-            //direccion.value = response.data.direccion
+            direccion.value = response.data.direccion
             ispStatus.value = "Proveedor de Internet OK."
             region.value=response.data.continent+" "+response.data.country+" "+response.data.city
 
