@@ -1,3 +1,5 @@
+//Hace andar al reloj del menu principal
+
 function reloj() {
     momentoActual = new Date()
     hora = momentoActual.getHours().toString().padStart(2,"0")

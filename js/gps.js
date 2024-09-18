@@ -1,3 +1,5 @@
+//Archivo para consultar el GPS del dispositivo
+
 function geoFindMe() {
     var latitud=0
     var longitud=0

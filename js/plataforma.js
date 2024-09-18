@@ -1,3 +1,5 @@
+//Archivo para consultar plataforma del dispositivo
+
 function getPlataforma(){
     var parser = new UAParser(); 
     console.log(parser.getResult());

@@ -1,3 +1,5 @@
+// decorado para conseguir información de usuario
+
 parser = new UAParser()
 function navegador(){
     return parser.getResult().browser.name+
